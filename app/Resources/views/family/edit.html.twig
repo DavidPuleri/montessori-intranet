@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% set currentMenu = "family" %}
+{% block body %}
+    {{ backToList(path('school_family_index')) }}
+    <h1>Editer une famille</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    <input type="submit" value="Edit"/>
+    {{ form_end(edit_form) }}
+
+    <div class="deleteForm">
+        {{ form_start(delete_form) }}
+        <input type="submit" value="Delete" class="btn btn-danger">
+        {{ form_end(delete_form) }}
+    </div>
+
+{% endblock %}

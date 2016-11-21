@@ -1,0 +1,17 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    app.twig.view_helper:
+        class: AppBundle\Twig\ViewHelper
+        public: false
+        tags:
+            - { name: twig.extension }
+
+    security.authentication.customized_success_handler:
+        class: AppBundle\Security\LoginHandler
+        arguments: [ '@router' ]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }

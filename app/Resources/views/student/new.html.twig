@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% set currentMenu = "student" %}
+{% block body %}
+    {{ backToList(path('school_student_index')) }}
+    <h1>Ajouter un élève</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+{% endblock %}

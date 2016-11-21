@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% set currentMenu = "settings" %}
+{% block body %}
+    {{ backToList(path('bug_student-default_index')) }}
+    <h1>Ajout d'un trajet par défaut</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Create"/>
+    {{ form_end(form) }}
+
+{% endblock %}

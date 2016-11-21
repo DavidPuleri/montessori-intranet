@@ -1,0 +1,11 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block left_menu %}
+
+    <ul class="nav nav-sidebar">
+        <li {% if currentMenu == "family" %} class="active" {% endif %}><a href="{{ path("school_family_index") }}">Familles</a></li>
+        <li {% if currentMenu == "student" %} class="active" {% endif %}><a href="{{ path("school_student_index") }}">Elèves</a></li>
+        <li {% if currentMenu == "settings" %} class="active" {% endif %}><a href="{{ path("bug_student-default_index") }}">Paramétrage des trajets par défaut</a></li>
+    </ul>
+
+{% endblock %}

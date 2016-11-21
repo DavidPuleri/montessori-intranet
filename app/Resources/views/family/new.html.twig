@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% set currentMenu = "family" %}
+{% block body %}
+    {{ backToList(path('school_family_index')) }}
+    <h1>Ajouter une famille</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Create" class="btn btn-info"/>
+    {{ form_end(form) }}
+
+
+
+{% endblock %}
