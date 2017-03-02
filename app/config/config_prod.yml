@@ -7,6 +7,13 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     localhost
+
+
 monolog:
     handlers:
         main:
